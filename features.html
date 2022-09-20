@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title> Order Page for Dreamy Cafe </title>
+  <meta charset="utf-8" />
+  <meta name="description" content="Web Development" />
+  <meta name="keywords"    content=" Assignment 2 " />
+  <meta name="author"      content="Jatine Francy Laksmono" />
+  <link href="style.css" rel="stylesheet" type="text/css" >
+  <script src="order.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <nav id ="blackBlock">
+            <ul class="ulNav">
+                <li class="liNav"><a href="index.html">HOME</a></li>
+                <li class="liNav"><a href="registration.html">REGISTRATION</a></li>
+                <li> <img src="images/logo.jpg" id="logo" alt="logo"></li>
+                <li class="liNav"><a href="order.html">ORDER</a></li>
+                <li class="liNav"><a href="features.html" class="active">FEATURES</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class = "container">
+            <img src="images/featureSlog.png" id="welcomePic" alt="bg3">
+        </div>
+
+        <div class="titleContainer">
+            <h5 class="smallTxt">IMPLEMENTED</h5>
+            <h2 class="titleTxt">FEATURES</h2>
+            <div class="underline" style="border-color: grey;"></div>
+        </div>
+
+        <br><br><br>
+
+        <div class="sLeft">
+            <table class="featureTable">
+                <tr>
+                    <td>
+                        <div class="smallTxt2" style="text-align: center;"><br>NAV HIGHLIGHT</div>
+                        <p class="featureDesc">Highlight the menu item in the navigator corresponding to the current webpage. In this task, I have implemented to do it by using active class to diferenciate which page is currently in. In this website, I changed the color of the current nav link when it is being clicked.</p>
+
+                        <nav id ="navPreview">
+                            <ul class="ulNav">
+                                <li class="liNav"><a href="index.html">HOME</a></li>
+                                <li class="liNav"><a href="registration.html">REGISTRATION</a></li>
+                                <li class="liNav"><a href="order.html">ORDER</a></li>
+                                <li class="liNav"><a href="features.html" class="active">FEATURES</a></li>
+                            </ul>
+                        </nav>
+
+                        <br>
+
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <br><br><br><br>
+
+        <div class="sRight">
+            <table class="featureTable">
+                <tr>
+                    <td class="featureDescCtn">
+                        <div class="smallTxt2"><br>&nbsp;&nbsp;&nbsp;&nbsp;SAME AS DELIVERY</div>
+
+                        <p class="featureDesc" style="margin-right: 0">In the <a href="order.html">order</a> page, I have implemented the 'same as delivery address' checkbox in the order form. So in the preview form in the left, when we click the delivery radio button, the address field will become enabled. If we have fill in the address field, once we tick the same as delivery address, the street and postcode field for the billing address will automatically become invisible. And so, if we tried later in the form, the street and postcode field for the billing address will be filled with the delivery address. This is done by using java script.  </p>
+                    </td>
+                    <td class="featurePreview">
+                        <label class="labelRegis"><br>SHIPPING</label>
+                        <input type="radio" id="delivery" name ="shipping" value="delivery" onclick="deliveryChecked(true)">
+                        <label for="delivery" class="typeInput">Delivery</label>
+                        <input type="radio" id="pickup" name ="shipping" value="pickup" onclick="deliveryChecked(false)">
+                        <label for="pickup" class="typeInput">Pickup</label>
+
+                        <label class="labelRegis"><br>ADDRESS</label>
+				        <input id="street" type="text" name="street" placeholder="Street" disabled="disabled" class="inputText"/>
+                        <input id="zip" type="text" name="zip" placeholder="Postcode" disabled="disabled" class="inputText"/>
+
+                        <label class="labelRegis"><br>BILLING ADDRESS</label>
+                        <input type="checkbox" id="billingAdd" name="Billing Address" value="same as delivery address" onclick="billAddVisibility(this)">
+                        <label for="billingAdd" class="typeInput">Same as delivery address</label>
+                        <input id="billStreet" type="text" name="Billing Street" placeholder="Street" style="visibility:visible;" class="inputText"/>
+                        <input id="billZip" type="text" name="Billing Zip" placeholder="Postcode" style="visibility:visible;" class="inputText"/>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <br><br><br><br>
+
+        <div class="sRight">
+            <table class="featureTable">
+                <tr>
+                    <td class="featurePreview">
+                        <label class="labelRegis"><br>PAYMENT OPTIONS</label>
+                        <input type="radio" id="cod" name="payment" value="payOnPickUp" onclick="cardOption(false); cardDetails(false)">
+                        <label for="cod" class="typeInput">Pickup</label>
+                        <input type="radio" id="online" name="payment" value="payOnline" onclick="cardOption(true)">
+                        <label for="online" class="typeInput">Online</label>
+
+                        <label class="labelRegis"><br>CARD OPTIONS</label>
+                        <input type="radio" id="visa" name="cardType" value="visa" disabled="disabled" onclick="cardDetails(true)">
+                        <label for="visa" class="typeInput">Visa</label>
+                        <input type="radio" id="masterCard" name="cardType" value="masterCard" disabled="disabled" onclick="cardDetails(true)">
+                        <label for="masterCard" class="typeInput">MasterCard</label>
+                        <input type="radio" id="americanExpress" name="cardType" value="americanExpress" disabled="disabled" onclick="cardDetails(true)">
+                        <label for="americanExpress" class="typeInput">American Express</label>
+
+                        <label class="labelRegis"><br>CARD DETAILS</label>
+                        <input id="cardNumber" type="text" name="cardNumber" placeholder="Card Number" disabled="disabled" class="inputText"/>
+
+                    </td>
+                    <td class="featureDescCtn">
+                        <div class="smallTxt2"><br>&nbsp;&nbsp;&nbsp;&nbsp;TYPES OF CREDIT CARDS</div>
+
+                        <p class="featureDesc">In the <a href="order.html">order</a> page, I have implemented to choose either visa / mastercard / american express. When a card type has been chosen, and customer need to input card number based each requirement digit. Here in JavaScript, I have made an alert to print whether a card number is valid and has the requirement digit. 16 digits for both visa and mastercard and 18 digits for american express. (p.s. customer must choose online payment option in order card option and card details to be enabled) </p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+    </main>
+</body>
+</html>

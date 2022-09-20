@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title> Homepage for Dreamy Cafe </title>
+  <meta charset="utf-8" />
+  <meta name="description" content="Web Development" />
+  <meta name="keywords"    content=" Assignment 2 " />
+  <meta name="author"      content="Jatine Francy Laksmono" />
+  <link href="style.css" rel="stylesheet" type="text/css" >
+</head>
+
+<body>
+
+    <!-- Display the navbar here -->
+    <header>
+        <nav id ="blackBlock">
+            <ul class="ulNav">
+                <li class="liNav"><a href="index.html" class="active" >HOME</a></li>
+                <li class="liNav"><a href="registration.html">REGISTRATION</a></li>
+                <li> <img src="images/logo.jpg" id="logo" alt="logo"></li>
+                <li class="liNav"><a href="order.html">ORDER</a></li>
+                <li class="liNav"><a href="features.html">FEATURES</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main components in the page -->
+    <main>
+
+        <!-- Display the welcome image here -->
+        <div class = "container">
+            <img src="images/welcome.png" id="welcomePic" alt="bg">
+            <div id="btnContainer"><a href ="order.html" class="btnText">ORDER NOW</a></div>
+        </div>
+        
+        <!-- Display cafe history information -->
+        <div class="titleContainer">
+            <h5 class="smallTxt">OUR</h5>
+            <h2 class="titleTxt">HISTORY</h2>
+            <div class="underline" style="border-color: grey;"></div>
+            <p class="description"><br>Dreamy Cafè is an independent coffee shop founded in Melbourne, Australia. The founder, Jastine Liong, open this cafe in 2010. We made our own coffee and roast it each week to make the best homemade coffee in order to satisfy our customer. We are really love to see you enjoy your day by starting it with drinking our wonderous unimaginable flavour! <br><br><br><br></p>
+        </div>
+        
+        <!-- Display cafe location information -->
+        <table>
+            <tr>
+                <td class="leftContainer">
+                    <h5 class="smallTxt2">OUR</h5>
+                    <h2 class="titleTxt2">LOCATION</h2>
+                    <div class="underline" style="border-color: gray;"></div>
+                    <p class="description" style="color: black;"><br><br>555 St Kilda Road<br><br>Melbourne, Australia<br><br>Postcode 3004</p>
+                </td>
+                <td>
+                    <img src="images/location.png" id="picTmp" alt="location">
+                </td>
+            </tr>
+
+        </table>
+
+        <!-- Enter lines -->
+        <br><br>
+
+        <!-- Title container for coffee beans -->
+        <div class="titleContainer">
+            <h5 class="smallTxt">OUR</h5>
+            <h2 class="titleTxt">COFFEES</h2>
+            <div class="underline" style="border-color: grey;"></div>
+        </div>
+
+        <br><br> <br><br>
+
+        <!-- Display robusta coffee bean information and details -->
+        <table style="position: relative;">
+            <tr>
+                <td style="width: 100%">
+                    <img src="images/robusta.png" alt="robusta" class="cBeansImg2">
+                    <h1 class="cNum" style="right: 0px; margin-right: 20vw;">01</h1>
+                    <h5 class="cSmallRight">OUR COFFEE</h5>
+                    <h2 class="cTitleRight">ROBUSTA</h2>
+                    <p class="cDesc" style="margin-left: 50vw; margin-right: 5vw;">Robusta plant have double the amount of caffeine in them, meaning that they are an excellent choice for a real boost and offer a more harsh flavour. The beans also have a smooth texture and it is often said that they even have a slight chocolate hint to them.</p>
+                </td>
+            </tr>
+        </table>
+
+        <br><br> <br>
+
+        <!-- Display arabica coffee bean information and details -->
+        <table style="border-spacing: 0px; position: relative; width: 100%;" >
+            <tr>
+                <td id ="cType" style="background-color: white;">
+                    <img src="images/arabica.png" alt="arabica" class="cBeansImg">
+                    <h1 class="cNum">02</h1>
+                    <h5 class="cSmallLeft">OUR COFFEE</h5>
+                    <h2 class="cTitleLeft">ARABICA</h2>
+                    <p class="cDesc">Known as one of the most popular and well known types of coffee bean, Arabica beans are the most commonly produced variety and are considered higher quality beans. In fact, over 60% of the coffee beans in the world that are produced are Arabica variety. These beans are grown at high altitudes and need to be in an area that has a steady rainfall and plenty of shade.</p>
+                </td>
+            </tr>
+        </table>
+
+        <br>
+
+        <!-- Display liberica coffee bean information and details -->
+        <table>
+            <tr>
+                <td>
+                    <img src="images/liberica.png" alt="liberica" class="cBeansImg2">
+                    <h1 class="cNum" style="right: 0px; margin-right: 20vw;">03</h1>
+                    <h5 class="cSmallRight">OUR COFFEE</h5>
+                    <h2 class="cTitleRight">LIBERICA</h2>
+                    <p class="cDesc" style="margin-left: 50vw; margin-right: 5vw;">Liberica beans are larger than the other beans and is the only one in the world that is known to have an irregular shape. They are also unique in their aroma and some say that they are fruity and floral too.</p>
+                </td>
+            </tr>
+        </table>
+
+        <!-- Title container for menu of coffee drinks -->
+        <div class="titleContainer" style="position: relative;">
+            <h5 class="smallTxt"><br><br><br><br>OUR</h5>
+            <h2 class="titleTxt">MENU</h2>
+            <div class="underline" style="border-color: grey;"></div>
+        </div>
+
+        <br><br>
+
+        <!-- Display each coffee drink information (in a picture) and price -->
+        <table style="width: 100%;">
+            <tr>
+                <td class="menuContainer">
+                    <img src="images/espresso.png" alt="espresso" class="coffeeDrinkImg">
+                    <p class="description" style="font-family: DinCondensed; text-shadow: 2px 2px #dadada;">ESPRESSO<br>$4.00</p>
+                </td>
+                <td class="menuContainer">
+                    <img src="images/americano.png" alt="americano" class="coffeeDrinkImg">
+                    <p class="description" style="font-family: DinCondensed; text-shadow: 2px 2px #dadada;">AMERICANO<br>$6.00</p>
+                </td>
+                <td class="menuContainer">
+                    <img src="images/caffeLatte.png" alt="latte" class="coffeeDrinkImg">
+                    <p class="description" style="font-family: DinCondensed; text-shadow: 2px 2px #dadada;">CAFFÈ LATTE<br>$5.00</p>
+                </td>
+            </tr>
+            <tr>
+                <td class="menuContainer">
+                    <img src="images/cappuccino.png" alt="cappuccino" class="coffeeDrinkImg">
+                    <p class="description" style="font-family: DinCondensed; text-shadow: 2px 2px #dadada;">CAPPUCCINO<br>$6.30</p>
+                </td>
+                <td class="menuContainer">
+                    <img src="images/longBlack.png" alt="longBlack" class="coffeeDrinkImg">
+                    <p class="description" style="font-family: DinCondensed; text-shadow: 2px 2px #dadada;">LONG BLACK<br>$4.30</p>
+                </td>
+                <td class="menuContainer">
+                    <img src="images/flatWhite.png" alt="flatWhite" class="coffeeDrinkImg">
+                    <p class="description" style="font-family: DinCondensed; text-shadow: 2px 2px #dadada;">FLAT WHITE<br>$5.30</p>
+                </td>
+            </tr>
+            <tr>
+                <td class="menuContainer">
+                    <img src="images/mocha.png" alt="mocha" class="coffeeDrinkImg">
+                    <p class="description" style="font-family: DinCondensed; text-shadow: 2px 2px #dadada;">MOCHA<br>$7.00</p>
+                </td>
+                <td class="menuContainer">
+                    <img src="images/macchiato.png" alt="macchiato" class="coffeeDrinkImg">
+                    <p class="description" style="font-family: DinCondensed; text-shadow: 2px 2px #dadada;"><br>MACCHIATO<br>$5.30</p>
+                </td>
+                <td class="menuContainer">
+                    <img src="images/cortado.png" alt="cortado" class="coffeeDrinkImg">
+                    <p class="description" style="font-family: DinCondensed; text-shadow: 2px 2px #dadada;">CORTADO<br>$6.00</p>
+                </td>
+            </tr>
+            <tr>
+                <td class="menuContainer"></td>
+                <td class="menuContainer">
+                    <img src="images/panna.png" alt="panna" class="coffeeDrinkImg">
+                    <p class="description" style="font-family: DinCondensed; text-shadow: 2px 2px #dadada;">ESPRESSO CON PANNA<br>$5.00</p>
+                </td>
+                <td class="menuContainer"></td>
+            </tr>
+        </table>
+
+        <!-- Title container for contact details of the cafe -->
+        <div class="titleContainer" style="position: relative;">
+            <h5 class="smallTxt"><br>OUR</h5>
+            <h2 class="titleTxt">CONTACT</h2>
+            <div class="underline" style="border-color: grey;"></div>
+        </div>
+
+        <br><br>
+
+        <!-- Displaying a table that lists a list of cafe contact details with its logo -->
+        <table style="width: 100%; border-spacing: 10px;">
+            <tr>
+                <td>
+                    <div class="contactCtn">
+                      <img src="images/phone.png" alt="phoneLogo" class="contactImg">
+                      <div class="overlay">
+                        <div class="text">+61421356375</div>
+                      </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="contactCtn">
+                      <img src="images/email.png" alt="emailLogo" class="contactImg">
+                      <div class="overlay">
+                        <div class="text">dreamycafe<br>@gmail.com</div>
+                      </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="contactCtn">
+                      <img src="images/ig.png" alt="igLogo" class="contactImg">
+                      <div class="overlay">
+                        <div class="text">dreamy_cafe</div>
+                      </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="contactCtn">
+                      <img src="images/line.png" alt="lineLogo" class="contactImg">
+                      <div class="overlay">
+                        <div class="text">dreamycafeau</div>
+                      </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="contactCtn">
+                      <img src="images/discord.png" alt="discordLogo" class="contactImg">
+                      <div class="overlay">
+                        <div class="text">dreamy #8078</div>
+                      </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="contactCtn">
+                      <img src="images/facebook.png" alt="facebookLogo" class="contactImg">
+                      <div class="overlay">
+                        <div class="text">Dreamy Cafè</div>
+                      </div>
+                    </div>
+                </td>
+              </tr>
+          </table>
+
+    </main>
+
+    
+    <!-- Displaying a copyright information -->
+    <footer>
+        <div id ="copyright">Copyright &copy; 2022 Jastine Laksmono</div>
+    </footer>
+
+</body>
+</html>

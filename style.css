@@ -1,0 +1,699 @@
+/* || GENERAL STYLES */
+
+label
+{
+    font-family: DinCondensed;
+}
+
+footer
+{
+    clear:both;
+    margin-top: 20px;
+    font-size: 3vw;
+}
+
+
+
+
+/* || UTILITIES - KEYFRAMES */
+
+/*Animate text from left to right*/
+@keyframes animText
+{
+    0% {left:-300px; top:20px;}
+    100% {left:50px; top:20px;}
+}
+
+/*Animate text from right to left*/
+@keyframes animText2
+{
+    0% {right:-300px; top:20px;}
+    100% {right:40px; top:20px;}
+}
+
+/*Animate pic from right to left*/
+@keyframes animPic
+{
+    0% {right:-300px;}
+    100% {right:0px;}
+}
+
+/*Animate pic from left to right*/
+@keyframes animPic2
+{
+    0% {left:-300px;}
+    100% {left:0px;}
+}
+
+/*Fade object from invisible to visible (full opacity)*/
+@keyframes fadeIn
+{
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+/*Animate text description from bottom to up*/
+@keyframes animDesc
+{
+    0% {bottom: -50px;}
+    100% {bottom: -10px;}
+}
+
+/*To make a block sliding left to the page
+*Implemented in achievement content in about me page)*/
+@keyframes slideToLeft
+{
+    from {margin-left: 100%; width: 300%;}
+    to {margin-left: 0%;width: 100%;}
+}
+
+/*To make a block sliding right of the page*/
+@keyframes slideToRight
+{
+    from {margin-left: -100%; width: 300%;}
+    to {margin-left: 0%; width: 100%;
+    }
+}
+
+
+/* || UTILITIES - FONTS */
+@font-face
+{
+    font-family: "Clarika";
+    src: url("fonts/Fontspring-DEMO-clarikaprogrot-dm.ttf");
+}
+
+@font-face
+{
+    font-family: "Avenir";
+    src: url("fonts/Avenir.ttf");
+}
+
+@font-face
+{
+    font-family: "DinCondensed";
+    src: url("fonts/DIN Condensed Bold.ttf");
+}
+
+
+/* || SITEWIDE */
+/*Container for nav and logo*/
+#blackBlock
+{
+    text-align: center;
+    background: black;
+    color: white;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+/*Cafe logo properties*/
+#logo{
+    width: 50%;
+    display: block;
+    position: relative;
+    padding-top: 10px;
+    margin: auto;
+    min-width: 2em;
+}
+
+/*Making the navbar in the top of the page*/
+.ulNav {
+    margin-left: auto;
+    margin-right: auto;
+    list-style: none;
+    display: flex;
+    width: 50%;
+    text-align: center;
+    padding-left: 0px;
+    padding-right: 60px;
+  }
+
+/*Each list set to side by side*/
+.liNav
+{
+    display: inline-block;
+    position: relative;
+    padding: 30px 0;
+    font-family: Clarika;
+}
+
+/*Each nav link properties*/
+.liNav a
+{
+    font-size: 1vw;
+    color: rgb(151, 151, 151);
+    text-decoration: none;
+    letter-spacing: 0.15em;
+    display: inline-block;
+    padding: 15px 20px;
+    position: relative;
+}
+
+/*Each Nav after properties having a line transitioning to left and right*/
+.liNav a:after
+{
+    width: 0;
+    bottom: 0;
+    height: 2px;
+    left: 50%;
+    background: none repeat scroll 0 0 transparent;
+    content: "";
+    display: block;
+    position: absolute;
+    background: white;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  }
+
+/*Nav when in hover properties*/
+.liNav a:hover:after
+{
+    width: 100%;
+    left: 0;
+}
+
+/*When the current page clicked, the nav text color for that page is changed to white
+(different from the other page text)*/
+.liNav a.active
+{
+    color: white;
+}
+
+/*Container for welcome picture*/
+.container
+{
+    width: 100%;
+    display: block;
+    position: relative;
+}
+/* Welcome image wallpaper in each page */
+#welcomePic
+{
+    width: 100%;
+}
+
+/*Container for each title/content*/
+.titleContainer
+{
+    display: block;
+    text-align: center;
+}
+
+/*Text properties for upper title text*/
+.smallTxt
+{
+    color: grey;
+    font-family: DinCondensed;
+    font-size: 3vw;
+    letter-spacing: 0.15em;
+}
+
+/*Text properties for lower title text*/
+.titleTxt
+{
+    color: black;
+    font-family: DinCondensed;
+    font-size: 8vw;
+    letter-spacing: 0.15em;
+    line-height: 5px;
+}
+
+/*A line for seperating title text to description or other content below*/
+.underline
+{
+    position: relative;
+    width: 100px;
+    border-bottom: 1px solid;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*Another text properties for upper title text*/
+.smallTxt2
+{
+    color: black;
+    font-family: DinCondensed;
+    font-size: 3vw;
+    letter-spacing: 0.15em;
+}
+
+/*Another text properties for lower title text*/
+.titleTxt2
+{
+    color: white;
+    font-family: DinCondensed;
+    font-size: 8vw;
+    letter-spacing: 0.15em;
+    line-height: 5px;
+}
+
+/*Copyright setting for each page*/
+#copyright
+{
+    overflow: hidden;
+    background-color: #868686;
+    font-family: Avenir;
+    text-align: right;
+    color: white;
+    padding-right: 10px;
+    font-size: 2vw;
+}
+
+
+
+
+/* || INDEX PAGE */
+
+/*Button container to order coffee*/
+#btnContainer
+{
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: Clarika;
+}
+
+/*Button text to order coffee*/
+.btnText
+{
+    background:none;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 50px;
+    border-color: white;
+    padding: 7px 16px;
+    line-height: 1.2;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1vw;
+    transition: all .2s ease;
+    color: white;
+}
+
+/*Change button color and text when in hover*/
+.btnText:hover
+{
+    color: black;
+    background-color: white;
+}
+
+/*Properties for description or explanation about an object or content*/
+.description
+{
+    font-size: 2vw;
+    color: gray;
+    font-family: Avenir;
+    text-align: center;
+    margin-left: 5em;
+    margin-right: 5em;
+}
+
+/*Location image properties*/
+#picTmp{
+    padding-top: 20px;
+    width: 100%;
+}
+
+/*Container properties for left-positioned content*/
+.leftContainer{
+    background-color: #d3d3d3;
+    text-align: center;
+    width: 60%;
+    vertical-align: text-top;
+}
+
+/*Arabica Coffee Type container properties*/
+#cType
+{
+    width: 50%;
+    background-color: #efefef;
+
+}
+
+/*Coffee type upper title set to left-positioned*/
+.cSmallLeft
+{
+    color: #939393;
+    font-family: DinCondensed;
+    font-size: 2vw;
+    letter-spacing: 0.15em;
+    position: relative;
+    animation: animText 4s forwards;
+    z-index:100;
+
+}
+
+/*Coffee type lower title set to left-positioned*/
+.cTitleLeft
+{
+    color: #6e6e6e;
+    font-family: DinCondensed;
+    font-size: 8vw;
+    line-height: 5px;
+    letter-spacing: 0.15em;
+    position: relative;
+    animation: animText 4s forwards;
+    z-index:100;
+}
+
+/*Coffee type upper title set to right-positioned*/
+.cSmallRight
+{
+    color: #000000;
+    font-family: DinCondensed;
+    font-size: 2vw;
+    letter-spacing: 0.15em;
+    position: relative;
+    animation: animText2 4s forwards;
+    z-index:100;
+    text-align: right;
+
+}
+
+/*Coffee type lower title set to right-positioned*/
+.cTitleRight
+{
+    color: #ffffff;
+    font-family: DinCondensed;
+    font-size: 8vw;
+    line-height: 5px;
+    letter-spacing: 0.15em;
+    position: relative;
+    animation: animText2 4s forwards;
+    z-index:100;
+    text-align: right;
+}
+
+/*Coffee type number order properties*/
+.cNum
+{
+    color: #cecece;
+    font-family: DinCondensed;
+    font-size: 22vw;
+    line-height: 15px;
+    position: absolute;
+    margin-left: 20vw;
+    animation: fadeIn ease 8s;
+}
+
+/*Coffee bean image properties (for Arabica)*/
+.cBeansImg
+{
+    width: 100%;
+    position: absolute;
+    animation: animPic 4s forwards;
+}
+
+/*Coffee bean image properties (for Robusta and Liberica)*/
+.cBeansImg2
+{
+    width: 100%;
+    position: absolute;
+    animation: animPic2 4s forwards;
+}
+
+/*Coffee bean description properties */
+.cDesc
+{
+    font-size: 2vw;
+    color: gray;
+    font-family: Avenir;
+    text-align: justify;
+    position: relative;
+    margin-top: 10vw;
+    margin-left: 5vw;
+    margin-bottom: 5vw;
+    margin-right: 45vw;
+    animation: animDesc 4s forwards;
+}
+
+/*Coffee drink image proerties*/
+.coffeeDrinkImg
+{
+    width: 50%;
+    transition: all 500ms;
+}
+
+/*Scale bigger coffee drink image when in hover*/
+.coffeeDrinkImg:hover
+{
+    transform: scale(1.3);
+}
+
+/*Menu container for coffee drinks*/
+.menuContainer
+{
+    width: 30%;
+    text-align: center;
+}
+
+/*Social media image properties for contact us*/
+.contactImg
+{
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 5px 5px 10px grey;
+}
+
+/*The block setting for each contact us content*/
+.contactCtn
+{
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+    margin: auto;
+}
+
+/*The overlay of the block content to show the information of each of the contact us details*/
+.overlay
+{
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    width: 100%;
+    height:0;
+    transition: .5s ease;
+    text-align: center;
+    background-color: #ffffff;
+  }
+
+/*Setting for both the content and overlay*/
+.contactCtn:hover .overlay
+{
+    bottom: 0;
+    height: 100%;
+}
+
+/*Set the text of each of the contact us information*/
+.text
+{
+    color: black;
+    font-size: 1.5vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-family: Avenir;
+    font-weight: bold;
+}
+
+
+/* || REGISTRATION PAGE */
+
+/*label properties for registration (also used in some order page's labels)*/
+.labelRegis
+{
+    font-family: DinCondensed;
+    color: rgb(137, 137, 137);
+    font-size: 2vw;
+    display: block;
+    text-align: center;
+    text-shadow: 1px 1px white;
+}
+
+/*Input text properties inside form*/
+.inputText
+{
+    line-height: 1.5;
+    display:block;
+    height: 3vw;
+    border-radius: 50px;
+    font-size: 1.5vw;
+    font-family: Avenir;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 50%;
+
+}
+
+/*Input properties for radios and checkboxes option text*/
+.typeInput
+{
+    font-family: Avenir;
+    font-size: 1.5vw;
+    color: grey;
+}
+
+/*Submit button properties for registration (also in order page)*/
+.button
+{
+    border-radius: 50px;
+    font-family: Avenir;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 30%;
+    font-size: 2vw;
+    max-width: 200px;
+}
+
+/*Container for registration form*/
+#regisContainer{
+    background-color: #d3d3d3;
+    text-align: center;
+    width: 60%;
+    vertical-align: text-top;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px #636363;
+    border-width: 1px;
+    border-color: #d3d3d3;
+    border-style: solid;
+
+}
+
+
+
+
+/* || ORDER PAGE */
+
+/*Title propertise to choose menu using picture*/
+.subTitle
+{
+    color: black;
+    font-family: DinCondensed;
+    font-size: 2.5vw;
+    letter-spacing: 0.15em;
+
+}
+
+/*Coffe bean menu image*/
+.coffeeBeanImg
+{
+    width: 10vw;
+    margin: 5px;
+
+}
+
+/*Scale bigger coffee bean image when in hover*/
+.coffeeBeanImg:hover
+{
+    transform: scale(1.1);
+
+}
+
+/*Menu Coffee bean names properties*/
+.menuName
+{
+    font-size: 1.5vw;
+    font-family: DinCondensed;
+    color: black;
+    text-decoration: underline 1px black;
+}
+
+/*Coffee drink image in choose menu when order*/
+.coffeeImg
+{
+    width: 15vw;
+    margin: 5px;
+
+}
+
+/*Scale bigger coffee drink image in the order page when in hover*/
+.coffeeImg:hover
+{
+    transform: scale(1.3);
+
+}
+
+
+
+
+/* || FEATURES PAGE*/
+
+/*Container properties for feature explanation*/
+
+/*Table properties to display features, its explanation, and preview*/
+.featureTable
+{
+    box-shadow: 5px 5px 10px grey;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+
+/*Container for feature description*/
+.featureDescCtn{
+    background-color: #ffffff;
+    text-align: center;
+    width: 60%;
+    vertical-align: text-top;
+}
+
+/*Container for feature preview label and input*/
+.featurePreview
+{
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+/*Properties feature description*/
+.featureDesc
+{
+    font-size: 2vw;
+    color: gray;
+    font-family: Avenir;
+    text-align: justify;
+    margin-left: 2em;
+    margin-right: 2em;
+    margin-bottom: 2em;
+}
+
+/*Container for nav preview*/
+#navPreview
+{
+    text-align: center;
+    background: black;
+    color: white;
+    width: 80%;
+    display: table;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto
+}
+
+/*slide feature tables from right to left*/
+.sLeft
+{
+    animation-duration: 3s;
+    animation-name: slideToLeft;
+}
+
+/*slide feature table from left to right*/
+.sRight
+{
+    animation-duration: 3s;
+    animation-name: slideToRight;
+}

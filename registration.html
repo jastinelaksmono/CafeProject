@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title> Registration Page for Dreamy Cafe </title>
+  <meta charset="utf-8" />
+  <meta name="description" content="Web Development" />
+  <meta name="keywords"    content=" Assignment 2 " />
+  <meta name="author"      content="Jatine Francy Laksmono" />
+  <link href="style.css" rel="stylesheet" type="text/css" >
+  <script src="regis.js"></script>
+</head>
+
+<body>
+
+    <!-- Display the navbar here -->
+    <header>
+        <nav id ="blackBlock">
+            <ul class="ulNav">
+                <li class="liNav"><a href="index.html" >HOME</a></li>
+                <li class="liNav"><a href="registration.html" class="active">REGISTRATION</a></li>
+                <li> <img src="images/logo.jpg" id="logo" alt="logo"></li>
+                <li class="liNav"><a href="order.html">ORDER</a></li>
+                <li class="liNav"><a href="features.html">FEATURES</a></li>
+            </ul>
+        </nav>
+    </header>
+
+     <!-- Main components in the page -->
+    <main>
+
+        <!-- Display the welcome image here -->
+        <div class = "container">
+            <img src="images/regisSlog.png" id="welcomePic" alt="bg3">
+        </div>
+
+        <!-- Display registration title -->
+        <div class="titleContainer">
+            <h5 class="smallTxt">REGISTRATION</h5>
+            <h2 class="titleTxt">JOIN US</h2>
+            <div class="underline" style="border-color: grey;"></div>
+        </div>
+
+        <!-- Enter lines -->
+        <br><br><br>
+
+        <!-- Registration/Sign in form -->
+        <table style="margin-left: auto; margin-right: auto;">
+            <tr>
+                <td id="regisContainer">
+                    <p class="smallTxt2"><br>SIGN IN<br></p>
+
+                    <form id="regform" method="post" action="http://mercury.swin.edu.au/it000000/cos10005/regtest.php">
+                        <label for="uname" class="labelRegis"><br>USERNAME</label>
+				        <input id="uname" type="text" name="name" placeholder="Name" class="inputText"/>
+
+                        <label for="pass" class="labelRegis"><br>PASSWORD</label>
+				        <input id="pass" type="password" name="password" placeholder="Password" class="inputText"/>
+
+                        <label class="labelRegis"><br>GENDER</label>
+                        <input id="genm" type="radio" name="gender" value="M"/>
+                        <label for="genm" class="typeInput">Male</label>
+                        <input id="genf" type="radio" name="gender" value="F"/>
+                        <label for="genf" class="typeInput">Female</label>
+
+                        <label for="email" class="labelRegis"><br>EMAIL</label>
+				        <input id="email" type="email" name="email" placeholder="example@gmail.com" class="inputText"/>
+
+                        <label class="labelRegis"><br>FAVOURITE COFFEE BEANS</label>
+                        <input type="checkbox" id="bean1" name="Fav Bean1" value="robusta">
+                        <label for="bean1" class="typeInput">Robusta</label>
+                        <input type="checkbox" id="bean2" name="Fav Bean2" value="arabica">
+                        <label for="bean2" class="typeInput">Arabica</label>
+                        <input type="checkbox" id="bean3" name="Fav Bean3" value="liberica">
+                        <label for="bean3" class="typeInput">Liberica</label>
+
+                        <label class="labelRegis"><br>FAVOURITE DRINK</label>
+                        <select name="Favourite Drink" id="drink" class="inputText">
+                            <option value="" disabled selected>Select your option</option>
+                            <option value="espresso">ESPRESSO</option>
+                            <option value="americano">AMERICANO</option>
+                            <option value="caffeLatte">CAFFÈ LATTE</option>
+                            <option value="cappuccino">CAPPUCCINO</option>
+                            <option value="longBlack">LONG BLACK</option>
+                            <option value="flatWhite">FLAT WHITE</option>
+                            <option value="mocha">MOCHA</option>
+                            <option value="macchiato">MACCHIATO</option>
+                            <option value="cortado">CORTADO</option>
+                            <option value="panna">ESPRESSO CON PANNA</option>
+                        </select> 
+
+                        <br><br>
+
+                        <input type="submit" value="submit" class="button"/>
+
+                        <br><br>
+                    </form>
+                </td>
+            </tr>
+        </table>
+
+        <br><br><br><br>
+
+    </main>
+
+    <!-- Displaying a copyright information -->
+    <footer>
+        <div id ="copyright">Copyright &copy; 2022 Jastine Laksmono</div>
+    </footer>
+
+</body>
+</html>

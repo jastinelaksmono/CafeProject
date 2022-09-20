@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title> Order Page for Dreamy Cafe </title>
+  <meta charset="utf-8" />
+  <meta name="description" content="Web Development" />
+  <meta name="keywords"    content=" Assignment 2 " />
+  <meta name="author"      content="Jatine Francy Laksmono" />
+  <link href="style.css" rel="stylesheet" type="text/css" >
+  <script src="order.js"></script>
+</head>
+
+<body>
+
+    <!-- Display the navbar here -->
+    <header>
+        <nav id ="blackBlock">
+            <ul class="ulNav">
+                <li class="liNav"><a href="index.html">HOME</a></li>
+                <li class="liNav"><a href="registration.html">REGISTRATION</a></li>
+                <li> <img src="images/logo.jpg" id="logo" alt="logo"></li>
+                <li class="liNav"><a href="order.html" class="active" >ORDER</a></li>
+                <li class="liNav"><a href="features.html">FEATURES</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main components in the page -->
+    <main>
+        <!-- Display the welcome image here -->
+        <div class = "container">
+            <img src="images/orderSlog.png" id="welcomePic" alt="bg3">
+        </div>
+
+        <!-- Display order form title -->
+        <div class="titleContainer">
+            <h5 class="smallTxt">COMPLETE FORM</h5>
+            <h2 class="titleTxt">TO ORDER</h2>
+            <div class="underline" style="border-color: grey;"></div>
+        </div>
+
+        <!-- Enter lines -->
+        <br><br><br>
+
+        <!-- Displaying order form, type of coffee beans, and menu of coffee drink pictures -->
+        <form id="regform" method="post" action="http://mercury.swin.edu.au/it000000/cos10005/regtest.php">
+            <table>
+                <tr>
+                    <td class="leftContainer">
+                        <p class="smallTxt2"><br>ORDER FORM<br></p>
+
+                        <label class="labelRegis"><br>SHIPPING</label>
+                        <input type="radio" id="delivery" name ="shipping" value="delivery" onclick="deliveryChecked(true)">
+                        <label for="delivery" class="typeInput">Delivery</label>
+                        <input type="radio" id="pickup" name ="shipping" value="pickup" onclick="deliveryChecked(false)">
+                        <label for="pickup" class="typeInput">Pickup</label>
+
+                        <label class="labelRegis"><br>ADDRESS</label>
+				        <input id="street" type="text" name="street" placeholder="Street" disabled="disabled" class="inputText"/>
+                        <input id="zip" type="text" name="zip" placeholder="Postcode" disabled="disabled" class="inputText"/>
+
+                        <label class="labelRegis"><br>CHOOSE YOUR COFFEE BEAN</label>
+                        <input type="radio" id="bean1" name ="bean" value="robusta">
+                        <label for="bean1" class="typeInput">Robusta</label>
+                        <input type="radio" id="bean2" name ="bean" value="arabica">
+                        <label for="bean2" class="typeInput">Arabica</label>
+                        <input type="radio" id="bean3" name ="bean" value="liberica">
+                        <label for="bean3" class="typeInput">Liberica</label>
+
+                        <label class="labelRegis"><br>CHOOSE YOUR DRINK</label>
+                        <table style="margin-left: auto; margin-right: auto; width:100%;">
+                            <tr>
+                                <td style="width: 55%;">
+                                    <select name="drink" id="drink" class="inputText" style="width: 65%; margin-right: 0px;">
+                                        <option value="" disabled selected>Select your option</option>
+                                        <option value="espresso" onclick="enableAmount()">ESPRESSO</option>
+                                        <option value="americano" onclick="enableAmount()">AMERICANO</option>
+                                        <option value="caffeLatte" onclick="enableAmount()">CAFFÈ LATTE</option>
+                                        <option value="cappuccino" onclick="enableAmount()">CAPPUCCINO</option>
+                                        <option value="longBlack" onclick="enableAmount()">LONG BLACK</option>
+                                        <option value="flatWhite" onclick="enableAmount()">FLAT WHITE</option>
+                                        <option value="mocha" onclick="enableAmount()">MOCHA</option>
+                                        <option value="macchiato" onclick="enableAmount()">MACCHIATO</option>
+                                        <option value="cortado" onclick="enableAmount()">CORTADO</option>
+                                        <option value="panna" onclick="enableAmount()">ESPRESSO CON PANNA</option>
+                                    </select>
+                                </td>
+                                <td style="width: 45%;">
+                                    <input id="amount" type="number" min="1" name="amount" placeholder="Amount" disabled="disabled" class="inputText" style="margin-left: 0px; height: 2.5vw;" onchange="enableAmount()"/>
+                                </td>
+                            </tr>
+                        </table>
+
+                        <label class="labelRegis"><br>TOTAL PRICE</label>
+                        <input id="price" type="text" name="price" placeholder="AUD 0.00" disabled="disabled" class="inputText" />
+
+                        <label class="labelRegis"><br>BILLING ADDRESS</label>
+                        <input type="checkbox" id="billingAdd" name="Billing Address" value="same as delivery address" onclick="billAddVisibility(this)">
+                        <label for="billingAdd" class="typeInput">Same as delivery address</label>
+                        <input id="billStreet" type="text" name="Billing Street" placeholder="Street" style="visibility:visible;" class="inputText"/>
+                        <input id="billZip" type="text" name="Billing Zip" placeholder="Postcode" style="visibility:visible;" class="inputText"/>
+
+                        <label for="phone" class="labelRegis"><br>CONTACT NUMBER</label>
+				        <input id="phone" type="text" name="phone" placeholder="Phone Number" class="inputText"/>
+
+                        <label for="email" class="labelRegis"><br>EMAIL FOR RECEIPT</label>
+				        <input id="email" type="email" name="email" placeholder="example@gmail.com" class="inputText"/>
+
+                        <label class="labelRegis"><br>PAYMENT OPTIONS</label>
+                        <input type="radio" id="cod" name="payment" value="payOnPickUp" onclick="cardOption(false); cardDetails(false)">
+                        <label for="cod" class="typeInput">Pickup</label>
+                        <input type="radio" id="online" name="payment" value="payOnline" onclick="cardOption(true)">
+                        <label for="online" class="typeInput">Online</label>
+
+                        <label class="labelRegis"><br>CARD OPTIONS</label>
+                        <input type="radio" id="visa" name="cardType" value="visa" disabled="disabled" onclick="cardDetails(true)">
+                        <label for="visa" class="typeInput">Visa</label>
+                        <input type="radio" id="masterCard" name="cardType" value="masterCard" disabled="disabled" onclick="cardDetails(true)">
+                        <label for="masterCard" class="typeInput">MasterCard</label>
+                        <input type="radio" id="americanExpress" name="cardType" value="americanExpress" disabled="disabled" onclick="cardDetails(true)">
+                        <label for="americanExpress" class="typeInput">American Express</label>
+
+                        <label class="labelRegis"><br>CARD DETAILS</label>
+                        <input id="cardNumber" type="text" name="cardNumber" placeholder="Card Number" disabled="disabled" class="inputText"/>
+
+                        <br><br>
+
+                        <input type="submit" value="submit" class="button">
+                        
+                        <br><br>
+                    </td>
+                
+                    <td style="vertical-align: text-top; width: 35%; text-align: center;" >
+                        <label class="subTitle"><br>&nbsp;&nbsp;CHOOSE YOUR COFFEE BEAN</label>
+                        <div class="inputText">&nbsp;&nbsp;click picture to select<br></div>
+                        <table style="margin-left: 1.5vw;">
+                            <tr>
+                                <td>
+                                    <img src="images/sRobusta.png" alt="sRobusta" class="coffeeBeanImg" onclick="chooseCoffeeBean(bean1)">
+                                    <p class="menuName">ROBUSTA</p>
+                                </td>
+                                <td>
+                                    <img src="images/sArabica.png" alt="sArabica" class="coffeeBeanImg" onclick="chooseCoffeeBean(bean2)">
+                                    <p class="menuName">ARABICA</p>
+                                </td>
+                                <td>
+                                    <img src="images/sLiberica.png" alt="sLiberica" class="coffeeBeanImg" onclick="chooseCoffeeBean(bean3)">
+                                    <p class="menuName">LIBERICA</p>
+                                </td>
+                            </tr>
+                        </table>
+
+                        <label class="subTitle"><br><br>&nbsp;&nbsp;&nbsp;CHOOSE YOUR COFFEE DRINK</label>
+                        <div class="inputText">&nbsp;&nbsp;&nbsp;click picture to select<br></div>
+                        <table style="margin-left: 1.5vw; margin-right: auto; width: 100%">
+                            <tr>
+                                <td>
+                                    <img src="images/espresso.png" alt="sEspresso" class="coffeeImg" onclick="chooseCoffeeDrink('espresso'); enableAmount()">
+                                </td>
+                                <td>
+                                    <img src="images/americano.png" alt="sAmericano" class="coffeeImg" onclick="chooseCoffeeDrink('americano'); enableAmount()">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src="images/caffeLatte.png" alt="sCaffeLatte" class="coffeeImg" onclick="chooseCoffeeDrink('caffeLatte'); enableAmount()">
+                                </td>
+                                <td>
+                                    <img src="images/cappuccino.png" alt="sCappuccino" class="coffeeImg" onclick="chooseCoffeeDrink('cappuccino'); enableAmount()">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src="images/longBlack.png" alt="sLongBlack" class="coffeeImg" onclick="chooseCoffeeDrink('longBlack'); enableAmount()">
+                                </td>
+                                <td>
+                                    <img src="images/flatWhite.png" alt="sFlatWhite" class="coffeeImg" onclick="chooseCoffeeDrink('flatWhite'); enableAmount()">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src="images/mocha.png" alt="sMocha" class="coffeeImg" onclick="chooseCoffeeDrink('mocha'); enableAmount('mocha')">
+                                </td>
+                                <td>
+                                    <img src="images/macchiato.png" alt="sMacchiato" class="coffeeImg" onclick="chooseCoffeeDrink('macchiato'); enableAmount()">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src="images/cortado.png" alt="sCortado" class="coffeeImg" onclick="chooseCoffeeDrink('cortado'); enableAmount()">
+                                </td>
+                                <td>
+                                    <img src="images/panna.png" alt="sPanna" class="coffeeImg" onclick="chooseCoffeeDrink('panna'); enableAmount()">
+                                </td>
+                            </tr>
+                        </table>
+                        
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </main>
+
+    <!-- Displaying a copyright information -->
+    <footer>
+        <div id ="copyright">Copyright &copy; 2022 Jastine Laksmono</div>
+    </footer>
+
+</body>
+</html>
